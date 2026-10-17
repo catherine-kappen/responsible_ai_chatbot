@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #f2f6fa;
+  --navy: #14243d;
+  --navy-2: #203958;
+  --teal: #0d9e8a;
+  --teal-light: #dff7f1;
+  --text: #18283e;
+  --muted: #708096;
+  --border: #e2eaf1;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 5%, rgba(20, 195, 164, .10), transparent 28rem),
+    radial-gradient(circle at 95% 15%, rgba(79, 133, 220, .10), transparent 26rem),
+    var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+button, input { font: inherit; }
+.app { max-width: 980px; width: calc(100% - 32px); margin: 0 auto; padding: 26px 0 32px; }
+.topbar { display: flex; align-items: center; gap: 13px; }
+.brand-mark, .bot-avatar {
+  display: grid; place-items: center; flex: 0 0 auto;
+  background: linear-gradient(145deg, #12b99f, #087f78); color: white;
+  box-shadow: 0 8px 20px rgba(13, 158, 138, .18);
+}
+.brand-mark { width: 47px; height: 47px; border-radius: 15px; font-size: 25px; }
+.eyebrow { color: var(--teal); font-size: 10px; font-weight: 800; letter-spacing: 1.7px; margin: 0 0 5px; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font: 800 21px 'Manrope', sans-serif; margin: 0; letter-spacing: -.5px; }
+h1 span { color: var(--teal); }
+.status { margin-left: auto; color: #587064; background: #e3f6ed; border: 1px solid #ccefe0; border-radius: 999px; padding: 8px 12px; font-size: 12px; font-weight: 700; }
+.status-dot { display: inline-block; width: 7px; height: 7px; background: #16a675; border-radius: 50%; margin-right: 6px; }
+.intro { padding: 42px 0 25px; max-width: 690px; }
+.intro h2 { font: 800 clamp(34px, 6vw, 52px)/1.08 'Manrope', sans-serif; letter-spacing: -1.8px; margin: 10px 0 14px; }
+.intro h2 span { color: var(--teal); }
+.intro > p:last-child { max-width: 620px; color: var(--muted); font-size: 16px; line-height: 1.7; margin-bottom: 0; }
+.principles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+.principle { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,.8); border: 1px solid var(--border); border-radius: 14px; padding: 14px; box-shadow: 0 5px 18px rgba(22,42,68,.025); }
+.principle span { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 9px; background: var(--teal-light); color: var(--teal); font-size: 18px; }
+.principle strong { font-size: 12px; }
+.chat-card { background: var(--white); border: 1px solid var(--border); border-radius: 22px; overflow: hidden; box-shadow: 0 20px 60px rgba(28, 54, 82, .08); }
+.chat-heading { display: flex; align-items: center; gap: 12px; padding: 18px 22px; border-bottom: 1px solid var(--border); }
+.bot-avatar { width: 42px; height: 42px; border-radius: 13px; font-size: 22px; }
+.chat-heading h3 { font: 700 15px 'Manrope', sans-serif; margin: 0 0 4px; }
+.chat-heading p { color: var(--muted); font-size: 11px; margin: 0; }
+.clear-button { margin-left: auto; background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; cursor: pointer; font-size: 12px; }
+.clear-button:hover { border-color: var(--teal); color: var(--teal); }
+.messages { min-height: 240px; max-height: 390px; overflow-y: auto; padding: 22px; display: flex; flex-direction: column; gap: 18px; background: linear-gradient(180deg, #fbfdff, #fff); }
+.message { max-width: 83%; display: flex; flex-direction: column; gap: 7px; }
+.bot-message { align-self: flex-start; }
+.user-message { align-self: flex-end; align-items: flex-end; }
+.bubble { padding: 14px 16px; border-radius: 4px 16px 16px 16px; background: #edf4f7; color: #24374e; line-height: 1.6; font-size: 14px; overflow-wrap: anywhere; }
+.user-message .bubble { background: var(--navy); color: #fff; border-radius: 16px 4px 16px 16px; }
+.message-meta { font-size: 10px; color: #91a0b1; padding: 0 3px; }
+.answer-tag { display: inline-block; background: #e0f7ef; color: #087d67; border-radius: 6px; padding: 4px 7px; font-size: 10px; font-weight: 800; letter-spacing: .4px; margin-bottom: 8px; }
+.answer-tag.warning { background: #fff2d8; color: #966000; }
+.quick-prompts { padding: 15px 22px 17px; border-top: 1px solid #f0f3f7; }
+.quick-prompts > p { color: #93a0af; font-size: 9px; font-weight: 800; letter-spacing: 1.4px; margin-bottom: 10px; }
+.prompt-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.prompt-buttons button { border: 1px solid #dce8ee; color: #3e586c; background: #fff; border-radius: 999px; padding: 8px 11px; font-size: 11px; cursor: pointer; transition: .18s ease; }
+.prompt-buttons button:hover { background: var(--teal-light); border-color: #a6e5d8; color: #087d67; }
+.composer { display: flex; gap: 10px; padding: 15px 20px; border-top: 1px solid var(--border); }
+.composer input { min-width: 0; flex: 1; border: 1px solid #dce5ec; border-radius: 13px; padding: 13px 15px; outline: none; color: var(--text); background: #fbfdff; }
+.composer input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,158,138,.1); }
+.composer button { border: 0; border-radius: 12px; padding: 0 19px; background: var(--teal); color: white; font-weight: 700; cursor: pointer; box-shadow: 0 7px 16px rgba(13,158,138,.16); }
+.composer button:hover { background: #087f78; }
+.composer button span { margin-left: 5px; }
+.privacy-note { margin: 0; padding: 0 22px 17px; color: #8998a9; font-size: 10px; }
+.privacy-note span { color: #16a675; font-size: 9px; margin-right: 5px; }
+footer { padding: 20px 4px 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+footer strong { color: #44586f; }
+.disclaimer { font-size: 10px; color: #9aa7b5; margin: 6px 0 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 680px) {
+  .app { width: calc(100% - 22px); padding-top: 16px; }
+  .intro { padding: 32px 0 21px; }
+  .principles { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .principle { padding: 10px; }
+  .chat-heading { padding: 15px; }
+  .messages { padding: 15px; }
+  .quick-prompts { padding: 14px 15px; }
+  .composer { padding: 12px; }
+  .composer button { padding: 0 13px; }
+  .message { max-width: 94%; }
+}

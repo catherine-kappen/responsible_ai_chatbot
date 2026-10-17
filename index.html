@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsible AI Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">✦</div>
+      <div>
+        <p class="eyebrow">A RESPONSIBLE AI DEMO</p>
+        <h1>ClearMind <span>AI</span></h1>
+      </div>
+      <div class="status"><span class="status-dot"></span> Demo mode</div>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">INTELLIGENCE WITH INTEGRITY</p>
+      <h2>Helpful answers.<br /><span>Honest limits.</span></h2>
+      <p>This mini chatbot demonstrates privacy awareness, transparency, safety, and honest uncertainty.</p>
+    </section>
+
+    <section class="principles" aria-label="Responsible AI principles">
+      <div class="principle"><span>◈</span><strong>Fairness</strong></div>
+      <div class="principle"><span>◉</span><strong>Privacy</strong></div>
+      <div class="principle"><span>◇</span><strong>Transparency</strong></div>
+      <div class="principle"><span>✓</span><strong>Safety</strong></div>
+    </section>
+
+    <section class="chat-card">
+      <div class="chat-heading">
+        <div class="bot-avatar">✦</div>
+        <div>
+          <h3>Chat with ClearMind</h3>
+          <p>Rule-based educational demonstration</p>
+        </div>
+        <button id="clearButton" class="clear-button" type="button">New chat</button>
+      </div>
+
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="message bot-message">
+          <div class="bubble">
+            Hi! I'm ClearMind AI. I can explain responsible AI, privacy, fairness, and safety.
+            <br /><br />
+            I'll also tell you when I don't know an answer. Please don't enter passwords or private information.
+          </div>
+          <span class="message-meta">ClearMind · Demo response</span>
+        </div>
+      </div>
+
+      <div class="quick-prompts">
+        <p>TRY ASKING</p>
+        <div class="prompt-buttons">
+          <button type="button" data-prompt="What is responsible AI?">What is responsible AI?</button>
+          <button type="button" data-prompt="How do you protect privacy?">Privacy</button>
+          <button type="button" data-prompt="What is AI bias?">AI bias</button>
+          <button type="button" data-prompt="Can you guarantee your answer is correct?">Can you be wrong?</button>
+        </div>
+      </div>
+
+      <form id="chatForm" class="composer">
+        <label class="sr-only" for="userInput">Type your question</label>
+        <input id="userInput" type="text" maxlength="500" placeholder="Ask a question…" autocomplete="off" />
+        <button type="submit" aria-label="Send message">Send <span>➤</span></button>
+      </form>
+      <p class="privacy-note"><span>●</span> This demo runs in your browser. It does not send messages to a server.</p>
+    </section>
+
+    <footer>
+      <p><strong>Responsible AI checklist</strong> — Is it fair? Is privacy protected? Are limits clear? Is it safe? Who is accountable?</p>
+      <p class="disclaimer">Educational prototype · Responses are predefined rules, not verified AI-generated answers.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
